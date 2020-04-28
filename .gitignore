@@ -1,4 +1,7 @@
+data/*
+venv/
 site/.cache/
 site/dist/
 site/*.log
 site/node_modules/
+__pycache__
