@@ -5,4 +5,4 @@ class CityCsvParser:
         self.csv_file = csv_file
 
     def parse(self):
-        return pd.read_csv(self.csv_file)
+        self.df = pd.read_csv(self.csv_file)
