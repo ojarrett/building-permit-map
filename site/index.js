@@ -4,6 +4,7 @@ import TileLayer from 'ol/layer/Tile';
 import Map from 'ol/Map';
 import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
+import OSM from 'ol/source/OSM';
 import View from 'ol/View';
 import {fromLonLat} from 'ol/proj';
 
@@ -15,12 +16,15 @@ const vs = new VectorSource({
 new Map({
     target: 'map',
     layers: [
+       new TileLayer({
+            source: new OSM()
+        }),
         new VectorLayer({
             source: new VectorSource({
                 format: new GeoJSON(),
                 url: './data/permits.json'
             })
-        })
+        }),
     ],
     view: new View({
         center: fromLonLat([-122.3, 47.6]),
