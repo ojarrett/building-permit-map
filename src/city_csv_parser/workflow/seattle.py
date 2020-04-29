@@ -11,7 +11,7 @@ class SeattleWorkflow:
     def convert_csv_coords_to_geojson(self):
         parser = SeattleCsvParser(self.csv_file)
         parser.parse()
-        write_points_to_geojson(parser.extract_all_long_lat_locations(), self.out_file)
+        write_points_to_geojson(parser.extract_all_long_lat_locations(), self.out_file, sample=10)
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
