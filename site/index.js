@@ -10,7 +10,7 @@ import {fromLonLat} from 'ol/proj';
 
 const vs = new VectorSource({
     format: new GeoJSON(),
-    url: './data/countries.json'
+    url: './data/permits.json'
 })
 
 new Map({
