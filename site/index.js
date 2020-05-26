@@ -22,7 +22,8 @@ new Map({
         new VectorLayer({
             source: new VectorSource({
                 format: new GeoJSON(),
-                url: './data/permits.json'
+                url: 'http://localhost:5000/buildings',
+                crossOrigin: 'anonymous',
             })
         }),
     ],
