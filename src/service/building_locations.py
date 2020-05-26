@@ -1,13 +1,13 @@
 import flask
 import os
 from flask import abort, request, jsonify, Flask
+from flask_cors import CORS
 
 DATA_DIR = os.environ.get('DATA_DIR')
 TEST_JSON = 'seattle.json'
 
 app = Flask(__name__)
-reg = None
-place_info = None
+CORS(app)
 
 @app.route('/buildings', methods=['GET'])
 def get_buildings():
